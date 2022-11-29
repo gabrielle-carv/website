@@ -314,10 +314,16 @@ METADATA_MODIFIED_FIELD = Field(
 
 UNCOMPRESSED_FILE_SIZE_FIELD = Field(
     title="Tamanho do Arquivo Não-Comprimido (em bytes)",
-    description=to_line([""]),
+    yaml_order={
+        "id_before": "compressed_file_size",
+        "id_after": "partitions",
+    },
 )
 
 COMPRESSED_FILE_SIZE_FIELD = Field(
     title="Tamanho do Arquivo Comprimido (em bytes)",
-    description=to_line([""]),
+    yaml_order={
+        "id_before": "columns",
+        "id_after": "uncompressed_file_size",
+    },
 )

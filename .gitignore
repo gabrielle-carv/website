@@ -13,4 +13,5 @@ tmp
 __MACOSX
 django/api/static/
 venv/
+.venv
 gcp_credential.json
